@@ -1,0 +1,93 @@
+//
+.header {
+    padding-top: 35px;
+    padding-bottom: 50px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 15px;
+        align-items: center;
+    }
+
+    &__logo {
+        grid-column: 1 / span 2;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    &__nav {
+        grid-column: 3 / span 7;
+    }
+
+    &__btns {
+        grid-column: 11 / span 2;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.nav {
+    &__list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        color: var(--color-primary);
+    }
+}
+.cart svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--color-primary);
+    fill: transparent;
+    stroke-width: 2;
+}
+.cart svg:hover {
+    stroke: var(--color-secondary);
+    transition: all 0.5s;
+}
+.search svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--color-primary);
+}
+.search svg:hover {
+    fill: var(--color-secondary);
+    transition: all 0.5s;
+}
+nav ul li a {
+    display: block;
+    padding: 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all 0.5s;
+}
+nav ul li a:hover {
+    color: #f7515c;
+}
+
+nav.nav ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+nav.nav ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #f7515c;
+    height: 1px;
+}
+nav.nav ul li a:hover:after {
+    width: 100%;
+}
